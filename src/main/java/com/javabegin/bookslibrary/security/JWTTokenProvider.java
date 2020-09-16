@@ -20,7 +20,7 @@ import java.util.Base64;
 import java.util.Date;
 
 @Component
-public class JWTTokenProvider implements AuthenticationProvider {
+public class JWTTokenProvider {
 
 
     private final UserDetailsService userDetailsService;
@@ -68,15 +68,7 @@ public class JWTTokenProvider implements AuthenticationProvider {
         }
     }
 
-    @Override
-    public Authentication authenticate(Authentication authentication) throws AuthenticationException {
-        return null;
-    }
 
-    @Override
-    public boolean supports(Class<?> aClass) {
-        return false;
-    }
 
     public Authentication getAuthentication(String token){
     UserDetails userDetails = userDetailsService.loadUserByUsername(getUsername(token));
