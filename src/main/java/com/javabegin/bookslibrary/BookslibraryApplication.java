@@ -14,11 +14,7 @@ public class BookslibraryApplication {
         SpringApplication.run(BookslibraryApplication.class, args);
 
     }
-    @Bean
-    public ServletRegistrationBean servletRegistrationBean() {
-        FacesServlet servlet = new FacesServlet();
-        return new ServletRegistrationBean(servlet, "*.xhtml");
-    }
+
 
 
 }
