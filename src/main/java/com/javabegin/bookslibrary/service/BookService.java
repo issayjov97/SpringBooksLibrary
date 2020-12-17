@@ -30,7 +30,7 @@ public class BookService implements BookDao {
 
     @Override
     public Page<Book> findByGenre(int pageNumber, int pageSize, String sortValue, Sort.Direction direction, long id) {
-        return  bookRepository.findByGenre(id,PageRequest.of(pageNumber,pageSize,Sort.by(direction,sortValue)));
+        return  bookRepository.findByGenre(id,PageRequest.of(pageNumber,pageSize,Sort.by()));
     }
 
     @Override
